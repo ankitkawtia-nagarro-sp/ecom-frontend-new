@@ -2,8 +2,17 @@
 // `ng build --prod` replaces `environment.ts` with `environment.prod.ts`.
 // The list of file replacements can be found in `angular.json`.
 
+const productBaseURL = 'http://localhost:8081';
+const authServerURL = 'http://localhost:8080';
+
 export const environment = {
-  production: false
+  production: false,
+  
+  searchUrl : productBaseURL+ "/search",
+
+  registerURL: authServerURL + "/user/create",
+  loginUrl: authServerURL + "/user/login",
+  logoutUrl: authServerURL+ "/logout"
 };
 
 /*

@@ -1,0 +1,156 @@
+<!-- page body content begin -->
+<div class="pg-body">
+    <div class="container">
+        <div class="gap-70 hidden-xs"></div>
+        <div class="row">
+            <div class="col-md-9 col-md-push-3 cat-content">
+                <div class="cat-view-options">
+                    <div class="row">
+                        <div class="col-md-4">
+                           <div class="row no-gutter form-group">
+                              <div class="col-md-4">
+                                 <label class="cvo-label">Sort By</label>
+                              </div>
+                              <div class="col-md-8">
+                                 <select class="form-control cvo-control s-styled hasCustomSelect" name="sortby">
+                                    <option value="default">Default Sorting</option>
+                                    <option value="price">Price</option>
+                                    <option value="rating">Rating</option>
+                                    <option value="popularity">Popularity</option>
+                                 </select>
+                              </div>
+                           </div>
+                        </div>
+                        <div class="col-md-3 col-lg-2">
+                           <div class="row no-gutter form-group">
+                              <div class="col-md-6">
+                                 <label class="cvo-label">Show</label>
+                              </div>
+                              <div class="col-md-6">
+                                 <select class="form-control cvo-control s-styled hasCustomSelect" name="items-per-page">
+                                    <option value="12">12</option>
+                                    <option value="18">18</option>
+                                    <option value="24">24</option>
+                                    <option value="33">33</option>
+                                 </select>
+                              </div>
+                           </div>
+                        </div>
+                        <div class="col-md-2 col-lg-2 cvo-availability-col">
+                           <div class="form-group">
+                              <select class="form-control cvo-control s-styled hasCustomSelect" name="avilability">
+                                 <option value="">Avilability</option>
+                                 <option value="available">Avilable</option>
+                                 <option value="coming">Coming</option>
+                              </select>
+                           </div>
+                        </div>
+                        <div class="col-md-3 col-lg-4 text-right">
+                           <label class="cvo-label">View</label>
+                           <div class="cvo-view-type" role="tablist">
+                              <ul class="list-inline">
+                                 <li class="active">
+                                    <a href="#pl-grid" role="tab" data-toggle="tab" class="cvo-grid">
+                                       <svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+                                           width="14px" height="14px" viewBox="0 0 50 50" xml:space="preserve">
+                                          <rect x="0" y="0" width="20" height="20"/>
+                                          <rect x="30" y="0" width="20" height="20"/>
+                                          <rect x="0" y="30" width="20" height="20"/>
+                                          <rect x="30" y="30" width="20" height="20"/>
+                                       </svg>
+                                    </a>
+                                 </li>
+                                 <li>
+                                    <a href="#pl-list" role="tab" data-toggle="tab" class="cvo-list">
+                                       <svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+                                           width="14px" height="14px" viewBox="0 0 30.263 25.6" xml:space="preserve"
+                                          >
+                                          <rect width="7.732" height="6.398"/>
+                                          <rect y="9.6" width="7.732" height="6.4"/>
+                                          <rect y="19.199" width="7.732" height="6.398"/>
+                                          <rect x="10.933" y="9.602" width="19.33" height="6.4"/>
+                                          <rect x="10.933" y="19.199" width="19.33" height="6.4"/>
+                                          <rect x="10.933" width="19.33" height="6.4"/>
+                                       </svg>
+                                    </a>
+                                 </li>
+                              </ul>
+                           </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="cat-pagination">
+                    <div class="row">
+                        <div class="col-sm-6">
+                           Items 1 to 15 of 150 total
+                        </div>
+                        <div class="col-sm-6 text-right">
+                           <ul class="pagination">
+                              <li class="active"><a href="#">1</a></li>
+                              <li><a href="#">2</a></li>
+                              <li><a href="#">3</a></li>
+                              <li><a href="#">4</a></li>
+                              <li><a href="#">5</a></li>
+                              <li><a href="#"><i class="arrow_carrot-right"></i></a></li>
+                           </ul>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="tab-content tab-no-style">
+                    <div class="tab-pane fade in active" id="pl-grid">
+                        <div class="products-list">
+                            <div class="row">
+                                <div class="col-md-4 col-sm-6 pl-item" *ngFor="let p of products">
+                                    <figure>
+                                        <a [routerLink]="['/product', p.category.split('/')[2], p.product_id]">
+                                           <img src="{{p.imgs[0].src}}" alt="">
+                                        </a>
+                                        <figcaption>
+                                           <a href="#" class="pl-button pl-addcart" data-toggle="tooltip" data-placement="top" title="Add To Cart"><i class="icon-bag"></i></a>
+                                           <a href="#" class="pl-button pl-qview" data-toggle="tooltip" data-placement="top" title="Quick View"><i class="icon-eye"></i></a>
+                                           <a href="#" class="pl-button pl-compare" data-toggle="tooltip" data-placement="top" title="Compare"><i class="arrow_left-right_alt"></i></a>
+                                           <a href="#" class="pl-button pl-wishlist" data-toggle="tooltip" data-placement="top" title="Add To Wish List"><i class="icon-heart"></i></a>
+                                        </figcaption>
+                                     </figure>
+                                     <div class="pl-caption">
+                                        <p class="pl-price-block">
+                                           <span class="pl-price-old">{{ p.price_details.mrp |currency:p.price_details.currency:'symbol-narrow'}}</span>
+                                           <span class="pl-price">{{p.price_details.sale_price | currency:p.price_details.currency:'symbol-narrow'}}</span>
+                                        </p>
+                                        <p class="pl-name">{{p.name}}</p>
+                                        <span class="stars-rating stars-4"><span class="stars"></span></span>
+                                     </div>
+                                </div>
+                            </div> 
+                        </div>
+                    </div>                  
+                </div>
+               
+            </div> <!--cat-content ends-->
+            
+            <!--cat-sidebar begins-->
+            <div class="col-md-3 col-md-pull-9 cat-sidebar">
+               <button class="btn btn-sec-col" (click)="applyFacets()">Apply</button>
+               <div class="widget wg-filterslist" *ngFor="let facetDto of facetDtos">
+                  <h3 class="wg-title">{{facetDto.facetName}}</h3>
+                  <div class="wg-body">
+                     <ul class="wgfl-list">
+                        <li *ngFor="let facetValue of facetDto.facetValueDto; index as i">
+                           <input id="{{facetDto.facetName}}_{{facetValue.facetValueName}}_{{i}}" type="checkbox" class="stl"
+                           (click)="check(facetDto.facetName, facetValue.facetValueName, $event)"
+                           (change)="fieldsChange($event)"
+                           [(ngModel)]="facetValue.checked">
+                           <label for="{{facetDto.facetName}}_{{facetValue.facetValueName}}_{{i}}" class="stl"><span></span>{{facetValue.facetValueName}} <em class="wgfl-count">({{facetValue.count}})</em></label><br/>
+                        </li>
+                     </ul>
+                  </div>
+               </div> <!-- widget -->
+            </div><!--cat-sidebar ends-->
+        </div> 
+        <div class="gap-70"></div>
+
+    </div> <!-- container -->
+
+</div> <!-- pg-body -->

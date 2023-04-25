@@ -1,0 +1,361 @@
+<!-- top bar begin -->
+<div id="top-bar">
+    <div class="container">
+       <div class="pull-left left-top-bar">
+          <div id="lang">
+             <ul class="list-inline hidden-xs">
+                <li>
+                   <a href="https://shop.azelab.com/home-1-clothes.html#" class="active">English</a>   
+                </li>
+                <li>
+                   <a href="https://shop.azelab.com/home-1-clothes.html#">French</a>   
+                </li>
+                <li>
+                   <span></span>
+                </li>
+             </ul>
+             <div class="dropdown dropdown-top-list visible-xs">
+                <a href="https://shop.azelab.com/home-1-clothes.html#" data-toggle="dropdown" title="">
+                   English <span class="caret"></span>
+                </a>
+                <div class="dropdown-menu dropdown-top-menu">
+                   <span class="dropdown-triangle-up"></span>
+                   <ul class="dropdown-top-menu-list">
+                      <li><a href="https://shop.azelab.com/home-1-clothes.html#">French</a></li>
+                      <li><a href="https://shop.azelab.com/home-1-clothes.html#">German</a></li>
+                   </ul>
+                </div>
+             </div>
+          </div>
+          <div id="currencies">
+             <ul class="list-inline hidden-xs">
+                <li>
+                   <a href="https://shop.azelab.com/home-1-clothes.html#" class="active">USD</a>   
+                </li>
+                <li>
+                   <a href="https://shop.azelab.com/home-1-clothes.html#">EUR</a>   
+                </li>
+             </ul>
+             <div class="dropdown dropdown-top-list visible-xs">
+                <a href="https://shop.azelab.com/home-1-clothes.html#" data-toggle="dropdown" title="">
+                   USD <span class="caret"></span>
+                </a>
+                <div class="dropdown-menu dropdown-top-menu">
+                   <span class="dropdown-triangle-up"></span>
+                   <ul class="dropdown-top-menu-list">
+                      <li><a href="https://shop.azelab.com/home-1-clothes.html#">EUR</a></li>
+                      <li><a href="https://shop.azelab.com/home-1-clothes.html#">AUD</a></li>
+                   </ul>
+                </div>
+             </div>
+          </div>
+          <div id="top-contacts">
+             <ul class="list-inline">
+                <li class="hidden-xs">
+                   <i class="icon-call-in"></i>
+                   <span>+ 1 (800) 2364 332 23 16</span>
+                </li>
+                <li class="hidden-xs">
+                   <a href="https://shop.azelab.com/your@email.com">
+                      <i class="icon-envelope"></i>
+                      <span class="hidden-xs">your@email.com</span>
+                   </a>
+                </li>
+             </ul>
+          </div>
+       </div>
+       <div class="pull-right">
+          <div id="user-top-bar">
+             <ul class="list-inline">
+                <li class="btn-group">
+                   <a href="https://shop.azelab.com/home-1-clothes.html#" class="pm_item visible-xs">
+                      <i class="icon-bag"></i> (2)
+                   </a>
+                </li>
+                <li class="btn-group dropdown">
+                     <a *ngIf="isShowLogin" href="" class="pm_item" data-toggle="dropdown" title="login">
+                        <i class="icon-login"></i>
+                        <span class="hidden-sm hidden-xs">Login</span>
+                     </a>
+                     <a *ngIf="!isShowLogin" href="/user-account" class="pm_item" title="username">
+                        <i class="icon-user"></i>
+                        <span class="hidden-sm hidden-xs">{{userAccount}}</span>
+                     </a>
+                   
+                   <!--Login form -->
+                   <div *ngIf="isShowLogin" class="dropdown-menu dropdown-menu-right" role="menu">
+                      <span class="dropdown-triangle-up"></span>
+                      <a href="https://shop.azelab.com/home-1-clothes.html#" class="dd-close-btn"><i class="icon_close"></i></a>
+                      <div class="dropdown-head">
+                         <h4 class="pull-left">Login to your account</h4>
+                      </div>
+                      <div class="dd-wrapper">
+                        <label class="stl" *ngIf="isSuccess">{{successMessage}}</label>
+                         <div id="dd-social-login">
+                            <div class="title"><span>Sign in using</span></div>
+                            <a href="https://shop.azelab.com/home-1-clothes.html#" class="btn facebook-btn"><i class="social_facebook "></i>FACEBOOK</a>
+                            <a href="https://shop.azelab.com/home-1-clothes.html#" class="btn twitter-btn"><i class="social_twitter"></i>TWITTER</a>
+                         </div>
+                         <div id="dd_login">
+                            <form (ngSubmit) = login()>
+                               <div class="required form-group">
+                                  <input type="text" name="email" [(ngModel)]="loginPayload.username" placeholder="Email / Login" class="placeholder-fix">
+                                  <i class="icon_mail field-icon"></i>
+                               </div>
+                               <div class="required form-group">
+                                  <input type="password" name="password" [(ngModel)]="loginPayload.password" placeholder="Password" class="placeholder-fix">
+                                  <i class="icon_lock field-icon"></i>
+                               </div>
+                               <div class="form-group">
+                                  <input id="remember" class="stl" type="checkbox" value="1" name="remember">
+                                  <label class="stl" for="remember"><span></span>remember me</label>
+                               </div>
+                               <div class="form-group text-center">
+                                  <button type="submit" class="btn btn-sm btn-third-col">Login</button>
+                               </div>
+                               <div class="text-danger" *ngIf="isError">
+                                 Invalid Credentials. Please Check and retry.
+                               </div>
+                               <div class="text-center"><a href="https://shop.azelab.com/coming-soon.html" class="active">Forgot your password?</a></div>
+                               <div class="dd-delimiter"></div>
+                               <div class="form-group text-center">
+                                  <button type="button" class="btn btn-sm btn-sec-col" (click)="toggleDisplayRegister()">Register</button>
+                               </div>
+                            </form>
+                         </div>
+                      </div>
+                   </div>
+                   <!--Register form-->
+                   <div *ngIf="isShowRegister" class="dropdown-menu dropdown-menu-right" role="menu">
+                     <span class="dropdown-triangle-up"></span>
+                     <a href="https://shop.azelab.com/home-1-clothes.html#" class="dd-close-btn"><i class="icon_close"></i></a>
+                     <div class="dropdown-head">
+                        <h4 class="pull-left">Register</h4>
+                     </div>
+                     <div class="dd-wrapper">
+                        <div id="dd-social-login">
+                           <div class="title"><span>Sign in using</span></div>
+                           <a href="https://shop.azelab.com/home-1-clothes.html#" class="btn facebook-btn"><i class="social_facebook "></i>FACEBOOK</a>
+                           <a href="https://shop.azelab.com/home-1-clothes.html#" class="btn twitter-btn"><i class="social_twitter"></i>TWITTER</a>
+                        </div>
+                        <div id="dd_login">
+                           <form (ngSubmit)="register()">
+                              <div class="required form-group">
+                                 <input type="text" name="email" [(ngModel)]="registerPayload.email" placeholder="Your Email Address" class="placeholder-fix">
+                                 <i class="icon_mail field-icon"></i>
+                              </div>
+                              <div class="required form-group">
+                                 <input type="password" name="password" [(ngModel)]="registerPayload.password" placeholder="Choose Password" class="placeholder-fix">
+                                 <i class="icon_lock field-icon"></i>
+                              </div>
+                              <div class="required form-group">
+                                 <input type="text" name="mobilenumber" [(ngModel)]="registerPayload.mobileNumber" placeholder="Mobile Number(For order status updates)" class="placeholder-fix" required>
+                                 <i class="icon-screen-smartphone field-icon"></i>
+                              </div>
+                              <div class="form-group">
+                                 <label class="stl" for="gender"><span></span>I'm a </label>
+                                 <input id="male" class="stl" type="radio" value="1" name="male">
+                                    <label class="stl" for="male"><span></span>Male</label>
+                                 <input id="female" class="stl" type="radio" value="2" name="female">
+                                    <label class="stl" for="female"><span></span>Female</label>
+                              </div>
+                              <div class="text-danger" *ngIf="isError">
+                                 {{errorMessage}}
+                               </div>
+                              <div class="dd-delimiter"></div>
+                              <div class="form-group text-center">
+                                 <button type="submit" class="btn btn-sm btn-sec-col">Register</button>
+                              </div>
+                           </form>
+                        </div>
+                     </div>
+                  </div>
+                </li>
+                <li class="btn-group hidden-xs dropdown">
+                   <a href="https://shop.azelab.com/home-1-clothes.html#" class="pm_item" data-toggle="dropdown" title="Wishlist">
+                      <i class="icon-heart"></i>
+                      <span class="hidden-sm">Wishlist</span> (<span class="dd-products-count">2</span>)
+                   </a>
+                   <div class="dropdown-menu dropdown-menu-right larger" role="menu" title="Compare Products">
+                      <span class="dropdown-triangle-up"></span>
+                      <a href="https://shop.azelab.com/home-1-clothes.html#" class="dd-close-btn"><i class="icon_close"></i></a>
+                      <div class="dropdown-head">
+                         <h4 class="pull-left">My Wishlist</h4>
+                      </div>
+                      <div class="dd-wrapper">
+                         <div class="dd-list-empty">There is no product in whishlist!</div>
+                         <div id="wishlist-product-group" class="dropdown-product-list">
+                            <div class="dd-product-group" id="pr1">
+                               <div class="dd-product-box pull-left">
+                                  <a href="https://shop.azelab.com/home-1-clothes.html#" title="product name">
+                                     <img src="assets/img/pr_2-small.jpg" alt="product name">
+                                  </a>
+                               </div>
+                               <div class="dd-product-desc pull-left">
+                                  <a class="title">Beautiful Fit Velvet Sweater For Him</a>
+                                  <div class="qty">1 x <span class="active">$700.00</span></div>
+                                  <button type="button" class="btn btn-sm btn-third-col">Add to Cart</button>
+                                  <a href="https://shop.azelab.com/home-1-clothes.html#" class="close-btn ddr"><i class="icon_close"></i></a>
+                               </div>
+                            </div>
+                            <div class="dd-product-group" id="pr2">
+                               <div class="dd-product-box pull-left">
+                                  <a href="https://shop.azelab.com/home-1-clothes.html#" title="product name">
+                                     <img src="assets/img/pr_3-small.jpg" alt="product name">
+                                  </a>
+                               </div>
+                               <div class="dd-product-desc pull-left">
+                                  <a class="title">Beautiful Fit Velvet Sweater For Her</a>
+                                  <div class="qty">1 x <span class="active">$800.00</span></div>
+                                  <button type="button" class="btn btn-sm btn-third-col">Add to Cart</button>
+                                  <a href="https://shop.azelab.com/home-1-clothes.html#" class="close-btn ddr"><i class="icon_close"></i></a>
+                               </div>
+                            </div>
+                            <div class="text-center clear-all-btn">
+                               <a href="https://shop.azelab.com/home-1-clothes.html#" class="close-btn"><i class="icon_close"></i><span>Clear all</span></a>
+                            </div>
+                         </div>
+                       <a href="https://shop.azelab.com/wishlist.html" class="btn btn-md btn-third-col btn-w100">Go to Wishlist</a>
+                      </div>
+                   </div>
+                </li>
+                <li class="btn-group hidden-xs dropdown">
+                   <a href="https://shop.azelab.com/home-1-clothes.html#" class="pm_item" data-toggle="dropdown">
+                      <i class="icon-shuffle"></i>
+                      <span class="hidden-sm">Compare</span> (<span class="dd-products-count">2</span>)
+                   </a>
+                   <div class="dropdown-menu dropdown-menu-right larger" role="menu">
+                      <span class="dropdown-triangle-up"></span>
+                      <a href="https://shop.azelab.com/home-1-clothes.html#" class="dd-close-btn"><i class="icon_close"></i></a>
+                      <div class="dropdown-head">
+                         <h4 class="pull-left">Compare List</h4>
+                      </div>
+                      <div class="dd-wrapper">
+                         <div class="dd-list-empty">There is no product to compare!</div>
+                         <div id="compare-product-group" class="dropdown-product-list">
+                            <div class="dd-product-group" id="pr3">
+                               <div class="dd-product-box pull-left">
+                                  <a href="https://shop.azelab.com/home-1-clothes.html#" title="product name">
+                                     <img src="assets/img/pr_2-small.jpg" alt="product name">
+                                  </a>
+                               </div>
+                               <div class="dd-product-desc pull-left">
+                                  <a class="title">Beautiful Fit Velvet Sweater For Him</a>
+                                  <div class="qty">1 x <span class="active">$700.00</span></div>
+                                  <button type="button" class="btn btn-sm btn-third-col">Add to Cart</button>
+                                  <a href="https://shop.azelab.com/home-1-clothes.html#" class="close-btn ddr"><i class="icon_close"></i></a>
+                               </div>
+                            </div>
+                            <div class="dd-product-group" id="pr4">
+                               <div class="dd-product-box pull-left">
+                                  <a href="https://shop.azelab.com/home-1-clothes.html#" title="product name">
+                                     <img src="assets/img/pr_3-small.jpg" alt="product name">
+                                  </a>
+                               </div>
+                               <div class="dd-product-desc pull-left">
+                                  <a class="title">Beautiful Fit Velvet Sweater For Here</a>
+                                  <div class="qty">1 x <span class="active">$800.00</span></div>
+                                  <button type="button" class="btn btn-sm btn-third-col">Add to Cart</button>
+                                  <a href="https://shop.azelab.com/home-1-clothes.html#" class="close-btn ddr"><i class="icon_close"></i></a>
+                               </div>
+                            </div>
+                            <div class="text-center clear-all-btn">
+                               <a id="clear-compare-products" class="close-btn"><i class="icon_close"></i><span>Clear all</span></a>
+                            </div>
+                         </div>
+                         <a href="https://shop.azelab.com/compare.html" class="btn btn-md btn-third-col btn-w100">Go to Comparision List</a>
+                      </div>
+                   </div>
+                </li>
+             </ul>
+          </div>
+       </div>
+
+    </div>
+ </div>
+ <!-- top bar end -->
+ <!-- header bar begin -->
+ <div id="header-bar">
+    <div class="container">
+       <div class="row">
+          <div id="header-logo" class="col-md-6 col-sm-12">
+             <a href="https://shop.azelab.com/home-1-clothes.html#">
+                <img src="assets/img/logo.svg" class="logo hidden-xs" alt="Shop+ - Responsive HTML5 Multipurpose Ecommerce Template">
+                <img src="assets/img/logo.svg" class="logo center-block visible-xs hidden-sm" alt="Shop+ - Responsive HTML5 Multipurpose Ecommerce Template">
+             </a>
+          </div>
+          <div class="col-md-3 top-search-box hidden-sm hidden-xs">
+             <form (ngSubmit)="search()">
+                <div class="required form-group">
+                   <input type="text" name="search_query" [(ngModel)]="searchQueryDto.textQuery" placeholder="Search" class="placeholder-fix top-search" autocomplete="off">
+                   <button><i class="icon_search field-icon"></i></button>
+                </div>
+             </form>
+          </div>
+          <div class="col-md-3 hidden-sm hidden-xs">
+             <div id="shopping-cart-wrapper" class="dropdown">
+                <a href="https://shop.azelab.com/home-1-clothes.html#" class="shp-ca" data-toggle="dropdown">
+                   <div class="s-bag-1">
+                      <i class="icon-bag"></i>
+                   </div>
+                   <div class="s-cart-pan">
+                      <div class="s-bag-2">
+                         <span class="dd-products-count">2</span> item(s) / <span class="active dd-products-price">$230.00</span>
+                      </div>
+                   </div>
+                </a>
+                <div class="dropdown-menu dropdown-menu-right larger text-left" role="menu">
+                   <span class="dropdown-triangle-up"></span>
+                   <a href="https://shop.azelab.com/home-1-clothes.html#" class="dd-close-btn"><i class="icon_close"></i></a>
+                   <div class="dropdown-head">
+                      <h4 class="pull-left">2 items in the shopping bag</h4>
+                   </div>
+                   <div class="dd-wrapper">
+                      <div class="dd-list-empty">There is no product in shopping cart!</div>
+                      <div id="cart-product-group" class="dropdown-product-list">
+                         <div class="dd-product-group" id="pr5">
+                            <div class="dd-product-box pull-left">
+                               <a href="https://shop.azelab.com/product-page.html" title="product name">
+                                  <img src="assets/img/pr_2-small.jpg" alt="product name">
+                               </a>
+                            </div>
+                            <div class="dd-product-desc pull-left">
+                               <a class="title">Beautiful Fit Velvet Sweater For Him test for longer header test for longer header</a>
+                               <div class="qty">1 x <span class="active">$700.00</span></div>
+                               <a href="https://shop.azelab.com/home-1-clothes.html#" class="close-btn ddr"><i class="icon_close"></i></a>
+                            </div>
+                         </div>
+                         <div class="dd-product-group" id="pr6">
+                            <div class="dd-product-box pull-left">
+                               <a href="https://shop.azelab.com/product-page.html" title="product name">
+                                  <img src="assets/img/pr_3-small.jpg" alt="product name">
+                               </a>
+                            </div>
+                            <div class="dd-product-desc pull-left">
+                               <a class="title">Beautiful Fit Velvet Sweater For Here</a>
+                               <div class="qty">1 x <span class="active">$800.00</span></div>
+                               <a href="https://shop.azelab.com/home-1-clothes.html#" class="close-btn ddr"><i class="icon_close"></i></a>
+                            </div>
+                         </div>
+                         <div class="text-center clear-all-btn">
+                            <span class="cart-block-subtotal">
+                               Cart Subtotal: $1500.00
+                            </span>
+                         </div>
+                      </div>
+                      <div class="row no-gutter">
+                         <div class="col-xs-6">
+                            <a href="https://shop.azelab.com/shopping-cart.html" class="btn btn-md btn-third-col btn-w100">View Cart</a>
+                         </div>
+                         <div class="col-xs-6">
+                            <a href="https://shop.azelab.com/checkout.html" class="btn btn-md btn-third-col btn-w100">Procced to Checkout</a>
+                         </div>
+                      </div>
+                   </div>
+                </div>
+             </div>
+          </div>
+       </div>
+    </div>
+ </div>
+ <!-- header bar end -->

@@ -1,0 +1,609 @@
+<!-- page header begin -->
+      <div class="pg-header">
+         <div class="container">
+            <div class="row">
+               <div class="col-md-6 col-sm-12 title">
+                  <h1>Product page</h1>
+               </div>
+               <div class="col-md-6 col-sm-12">
+                  <div class="b-crumbs pull-right"><a href="/home">Home/</a> <a href="https://shop.azelab.com/product-page.html#">{{product.category}}</a> </div>
+               </div>
+            </div>
+         </div>
+      </div>
+<!-- page header end -->
+  
+<!-- page body content begin -->
+<div class="pg-body clearfix">
+    <div class="container clearfix">
+       <div class="row">
+          <div class="container">
+             <div class="col-xs-12 product-top-line">
+                <button type="button" class="btn btn-yet-col col-xs-2 back-catalog pull-left" (click)="gotoProducts()">BACK IN CATALOG</button>
+                <div class="pull-right">
+                   <div class="previous-product"><img src="assets/img/prd-1.jpg" alt="#"><span class="arrow_carrot-left"></span></div>
+                   <div class="next-product"><img src="assets/img/prd-2.jpg" alt="#"><span class="arrow_carrot-right"></span></div>
+                </div>
+             </div>
+          </div>
+       </div>
+       <div class="row">
+          <div class="col-md-6 col-lg-7 col-xs-12 product-images">
+             <div class="clearfix zoom-content">
+                
+                <a href="https://shop.azelab.com/product-page.html#" class="btn btn-yet-col" id="product-pupGallery-button" data-target="#product-pupGallery-box" data-toggle="modal"><span class="icon-magnifier-add"></span></a>
+                <div aria-hidden="true" aria-labelledby="product-added" role="dialog" tabindex="-1" id="product-pupGallery-box" class="modal fade" style="display: none;">
+                  <div class="modal-dialog modal-lg">
+                    <div class="modal-content">
+                      <div class="modal-header">
+                         <a aria-hidden="true" data-dismiss="modal" class="modal-close" href="https://shop.azelab.com/product-page.html#"><i class="icon_close"></i></a>
+                         <h4 class="modal-title">Information</h4>
+                      </div>
+                      <div class="modal-body modal-body-info">
+                         <div class="clearfix zoom-content-2">
+                            <div class="clearfix big-image">
+                               <img id="zoom_04" src="{{product.imgs[1].src}}" alt=""> 
+                            </div>
+                            <div class="clearfix thumbnails">
+                               <ul id="thumblist2" class="clearfix">
+                                  <li>
+                                     <a href="https://shop.azelab.com/product-page.html#" class="elevatezoom-gallery zoomThumbActive" data-update="" data-image="" data-zoom-image="">
+                                        <img src="{{product.imgs[2].src}}" width="100" alt="">
+                                     </a>
+                                  </li>
+                               </ul>
+                            </div>
+                         </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                
+
+                <a href="https://shop.azelab.com/product-page.html#" class="btn btn-yet-col" id="product-video-button" data-target="#product-video-box" data-toggle="modal"><span class="social_youtube"></span></a>
+                <div aria-hidden="true" aria-labelledby="product-added" role="dialog" tabindex="-1" id="product-video-box" class="modal fade" style="display: none;">
+                  <div class="modal-dialog modal-md">
+                    <div class="modal-content">
+                      <div class="modal-header">
+                         <a aria-hidden="true" data-dismiss="modal" class="modal-close" href="https://shop.azelab.com/product-page.html#"><i class="icon_close"></i></a>
+                         <h4 class="modal-title">Product video</h4>
+                      </div>
+                      <div class="modal-body modal-body-info">
+                         <div class="embed-responsive embed-responsive-16by9">
+                            <iframe class="embed-responsive-item" src="assets/zTJkgHuYt_8.html" allowfullscreen=""></iframe>
+                         </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="clearfix big-image product-page">
+                   <div style="height:672px;width:599px; position: relative;" class="zoomWrapper"><img id="zoom_03" src="{{product.imgs[1].src}}" data-zoom-image="" alt="" style="position: absolute;"></div>
+                </div>
+                <br>
+                <div class="clearfix thumbnails">
+                   <div class="bx-wrapper" style="max-width: 510px; margin: 0px auto;"><div class="bx-viewport" style="width: 100%; overflow: hidden; position: relative; height: 120px;"><ul id="thumblist" class="clearfix" style="width: 715%; position: relative; transition-duration: 0s; transform: translate3d(-40px, 0px, 0px);">
+
+                      <li style="float: left; list-style: none; position: relative; margin-right: 10px; width: 120px;">
+                         <a href="https://shop.azelab.com/product-page.html#" class="elevatezoom-gallery zoomThumbActive" data-update="" data-image="" data-zoom-image="">
+                            <img src="{{product.imgs[2].src}}" width="100" alt="">
+                         </a>
+                      </li>
+                   </ul></div><div class="bx-controls bx-has-controls-direction"><div class="bx-controls-direction"><a class="bx-prev disabled" href="https://shop.azelab.com/product-page.html"></a><a class="bx-next" href="https://shop.azelab.com/product-page.html"></a></div></div></div>
+                </div>
+             </div>
+             <div class="article-info col-xs-12">
+                <div class="for-border-top share-wrapp clearfix">
+                   <span class="h7">SHARE PRODUCT</span>
+                   <ul class="list-inline social-buttons">
+                      <li class="facebook"><a href="https://shop.azelab.com/product-page.html#"><i class="icon-social-facebook"></i></a></li>
+                      <li class="tweeter"><a href="https://shop.azelab.com/product-page.html#"><i class="icon-social-twitter "></i></a></li>
+                      <li class="gplus"><a href="https://shop.azelab.com/product-page.html#"><i class="social_googleplus "></i></a></li>
+                      <li class="dribbble"><a href="https://shop.azelab.com/product-page.html#"><i class="icon-social-dribbble"></i></a></li>
+                      <li class="instantgram"><a href="https://shop.azelab.com/product-page.html#"><i class="social_instagram "></i></a></li>
+                   </ul>
+                </div>
+                <div class="for-border-top print-wrapp">
+                   <span class="print"><a href="https://shop.azelab.com/product-page.html"><span class="icon_printer-alt"></span>Print</a></span>
+                </div>
+             </div> 
+          </div>
+
+
+
+
+          <div class="col-md-6 col-lg-5 col-xs-12 product-info">
+             <div id="zoom-window-container" style="position: relative;"></div>
+             <div class="product-reviews">
+                <h3>{{product.name}}</h3>
+                <span class="stars-rating"><span class="stars"></span></span>
+                <a href="https://shop.azelab.com/product-page.html#">20 Reviewer(s)</a><a href="https://shop.azelab.com/product-page.html#review-btn">Add Review</a>
+             </div>
+             <img src="assets/img/nike.png" alt="#" class="brand">
+             <div class="hr"></div>
+             <div class="price">
+                {{product.price_details.sale_price | currency:product.price_details.currency:'symbol-narrow'}}
+                <span class="old-price">{{ product.price_details.mrp |currency:product.price_details.currency:'symbol-narrow'}}</span>
+             </div>
+             <p class="availability col-sm-pull-right col-xs-pull-left">Availability: <span><span class="in-stock"></span>In Stock</span></p>
+             <div class="hr"></div>
+             <p class="data-info">Product Code: <span>{{productCode}}</span></p>
+             <p class="data-info">Product Tags: 
+                <span *ngFor="let tag of tags">
+                    {{tag}},
+                </span>
+            </p>
+             <p class="data-info">Category: <span>{{product.category}}</span></p>
+             <div class="hr"></div>
+             <p>{{product.description}}</p>
+             <!-- <div class="col-xs-12 tech-info">
+                <div class="col-sm-4 col-xs-12" *ngFor="let attr of product.attrs">
+                   <span>{{attr.name}}</span>
+                   <span>{{attr.value}}</span>
+                </div>
+             </div> -->
+             <div class="hr"></div>
+             <span class="data-info secondary-font-family">COLOR: <span>{{colorNames[0]}}</span></span>
+              | 
+             <span class="availability">Availability: <span><span class="out-stock"></span>In Stock</span></span>
+             <div class="color-blocks">
+                <div class="radio-inline color" *ngFor="let color of colorNames; index as i">
+                    <input type="radio" name="color" value="{{color}}" id="radio-color-{{i}}"
+                    (change)="colorChangeHandler($event)">
+                        <label for="radio-color-{{i}}" class="{{color.toLowerCase()}}"></label>
+                </div>
+             </div>
+             <div class="hr"></div>
+             <span class="data-info secondary-font-family">SELECT SIZE</span>
+             <div class="size-blocks">
+                <div class="radio-inline size" *ngFor="let variant of colorVariants; index as i">
+                    <input type="radio" name="size" value="{{variant.skuid}}" id="radio-size-{{i}}"
+                    (change)="sizeChangeHandler($event)">
+                        <label for="radio-size-{{i}}">{{variant.size}}</label>
+                </div>
+             </div>
+             <div class="hr"></div>
+             <div class="cart_quantity_button clrfix product-count pull-left">
+                <a rel="nofollow" class="btn btn-default btn-minus" href="https://shop.azelab.com/product-page.html#" title="Subtract">–</a>
+                <input type="text" disabled="" size="2" autocomplete="off" class="cart_quantity_input form-control grey count" value="1" name="quantity">
+                <a rel="nofollow" class="btn btn-default btn-plus" href="https://shop.azelab.com/product-page.html#" title="Add">+</a>
+             </div>
+             <button class="btn btn-sec-col pull-left add-cart"><i class="icon-bag"></i>&nbsp;&nbsp;ADD TO CART</button>
+             <a href="https://shop.azelab.com/product-page.html#" class="btn btn-gray"><span class="icon-heart"></span></a>
+             <a href="https://shop.azelab.com/product-page.html" class="btn btn-gray"><span class="arrow_left-right_alt"></span></a>
+             <div class="hr"></div>
+             <div class="product-tabs">
+                <!-- Nav tabs -->
+                <ul role="tablist" class="nav nav-tabs">
+                  <li class="active"><a data-toggle="tab" role="tab" href="https://shop.azelab.com/product-page.html#tab-description">DESCRIPTION</a></li>
+                  <li><a data-toggle="tab" role="tab" href="https://shop.azelab.com/product-page.html#tab-additional-info">ADDITIONAL INFO</a></li>
+                  <li><a data-toggle="tab" role="tab" href="https://shop.azelab.com/product-page.html#tab-review" id="review-btn">REVIEWS</a></li>
+                </ul>
+
+                <!-- Tab panes -->
+                <div class="tab-content">
+                   <div id="tab-description" class="tab-pane active">
+                      <p>{{product.description}}</p>
+                   </div>
+                   <div id="tab-additional-info" class="tab-pane">
+                      <p>{{product.description}}</p>
+                   </div>
+                   <div id="tab-review" class="tab-pane">
+                      <form action="https://shop.azelab.com/product-page.html#">
+                         <div class="row">
+                            <div class="col-md-6 col-xs-12">
+                               <div class="form-group required"><label class="type-text">Name*<input type="text" class="form-control placeholder-fix"></label></div>
+                            </div>
+                            <div class="col-md-6 col-xs-12">
+                               <div class="form-group required"><label class="type-text">Email*<input type="text" class="form-control placeholder-fix"></label></div>
+                            </div>
+                            <div class="col-xs-12">
+                               <div class="you-rating">
+                                  <div class="data-info secondary-font-family">Your Rating</div>
+                                  <a href="https://shop.azelab.com/product-page.html#"><span class="stars-rating stars-1"><span class="stars"></span></span></a>
+                                  <a href="https://shop.azelab.com/product-page.html#"><span class="stars-rating stars-2"><span class="stars"></span></span></a>
+                                  <a href="https://shop.azelab.com/product-page.html#"><span class="stars-rating stars-3"><span class="stars"></span></span></a>
+                                  <a href="https://shop.azelab.com/product-page.html#"><span class="stars-rating stars-4"><span class="stars"></span></span></a>
+                                  <a href="https://shop.azelab.com/product-page.html#"><span class="stars-rating stars-5"><span class="stars"></span></span></a>
+                               </div>
+                               <div class="data-info secondary-font-family">Your Review</div>
+                               <div class="required form-group">
+                                  <textarea class="form-control placeholder-fix" rows="4"></textarea>
+                               </div>
+                               <button type="submit" class="btn btn-lg btn-sec-col col-xs-12">SUBMIT REVIEW</button>
+                            </div>
+                         </div>
+                      </form>
+                   </div>
+                </div>
+             </div>
+          </div>
+       </div>
+    </div>
+    <section>
+       <div class="container best-product">
+          <div class="col-xs-12"><h6>RELATED PRODUCTS</h6></div>
+          <div class="gap-70"></div>
+          <div class="products-list pl-carousel">
+             <ul class="pl-pages">
+                <li class="active">
+                   <div class="row">
+                      <div class="col-md-3 col-sm-6 pl-item">
+                         <figure>
+                            <a href="https://shop.azelab.com/product-page.html">
+                               <img src="assets/img/1.jpg" alt="">
+                            </a>
+                            <span class="pl-badge">NEW</span>
+                            <figcaption>
+                               <a href="https://shop.azelab.com/product-page.html#" class="pl-button pl-addcart" data-toggle="tooltip" data-placement="top" title="" data-original-title="Add To Cart"><i class="icon-bag"></i></a>
+                               <a href="https://shop.azelab.com/product-page.html#" class="pl-button pl-qview" data-toggle="tooltip" data-placement="top" title="" data-original-title="Quick View"><i class="icon-eye"></i></a>
+                               <a href="https://shop.azelab.com/product-page.html#" class="pl-button pl-compare" data-toggle="tooltip" data-placement="top" title="" data-original-title="Compare"><i class="arrow_left-right_alt"></i></a>
+                               <a href="https://shop.azelab.com/product-page.html#" class="pl-button pl-wishlist" data-toggle="tooltip" data-placement="top" title="" data-original-title="Add To Wish List"><i class="icon-heart"></i></a>
+                            </figcaption>
+                         </figure>
+                         <div class="pl-caption">
+                            <p class="pl-price-block">
+                               <span class="pl-price-old">$ 950.00</span>
+                               <span class="pl-price">$ 900.00</span>
+                            </p>
+                            <p class="pl-name">Lacoste Cotton Shirt Slim Fit</p>
+                            <span class="stars-rating stars-4"><span class="stars"></span></span>
+                         </div>
+                      </div>
+                      <div class="col-md-3 col-sm-6 pl-item">
+                         <figure>
+                            <a href="https://shop.azelab.com/product-page.html">
+                               <img src="assets/img/2.jpg" alt="">
+                            </a>
+                            <span class="pl-badge">- 50%</span>
+                            <figcaption>
+                               <a href="https://shop.azelab.com/product-page.html#" class="pl-button pl-addcart" data-toggle="tooltip" data-placement="top" title="" data-original-title="Add To Cart"><i class="icon-bag"></i></a>
+                               <a href="https://shop.azelab.com/product-page.html#" class="pl-button pl-qview" data-toggle="tooltip" data-placement="top" title="" data-original-title="Quick View"><i class="icon-eye"></i></a>
+                               <a href="https://shop.azelab.com/product-page.html#" class="pl-button pl-compare" data-toggle="tooltip" data-placement="top" title="" data-original-title="Compare"><i class="arrow_left-right_alt"></i></a>
+                               <a href="https://shop.azelab.com/product-page.html#" class="pl-button pl-wishlist" data-toggle="tooltip" data-placement="top" title="" data-original-title="Add To Wish List"><i class="icon-heart"></i></a>
+                            </figcaption>
+                         </figure>
+                         <div class="pl-caption">
+                            <p class="pl-price-block">
+                               <span class="pl-price-old"></span>
+                               <span class="pl-price">$ 900.00</span>
+                            </p>
+                            <p class="pl-name">Lacoste Cotton Shirt Slim Fit</p>
+                            <span class="stars-rating"><span class="stars"></span></span>
+                         </div>
+                      </div>
+                      <div class="col-md-3 col-sm-6 pl-item">
+                         <figure>
+                            <a href="https://shop.azelab.com/product-page.html">
+                               <img src="assets/img/3.jpg" alt="">
+                            </a>
+                            <figcaption>
+                               <a href="https://shop.azelab.com/product-page.html#" class="pl-button pl-addcart" data-toggle="tooltip" data-placement="top" title="" data-original-title="Add To Cart"><i class="icon-bag"></i></a>
+                               <a href="https://shop.azelab.com/product-page.html#" class="pl-button pl-qview" data-toggle="tooltip" data-placement="top" title="" data-original-title="Quick View"><i class="icon-eye"></i></a>
+                               <a href="https://shop.azelab.com/product-page.html#" class="pl-button pl-compare" data-toggle="tooltip" data-placement="top" title="" data-original-title="Compare"><i class="arrow_left-right_alt"></i></a>
+                               <a href="https://shop.azelab.com/product-page.html#" class="pl-button pl-wishlist" data-toggle="tooltip" data-placement="top" title="" data-original-title="Add To Wish List"><i class="icon-heart"></i></a>
+                            </figcaption>
+                         </figure>
+                         <div class="pl-caption">
+                            <p class="pl-price-block">
+                               <span class="pl-price-old"></span>
+                               <span class="pl-price">$ 900.00</span>
+                            </p>
+                            <p class="pl-name">Lacoste Cotton Shirt Slim Fit</p>
+                            <span class="stars-rating"><span class="stars"></span></span>
+                         </div>
+                      </div>
+                      <div class="col-md-3 col-sm-6 pl-item">
+                         <figure>
+                            <a href="https://shop.azelab.com/product-page.html">
+                               <img src="assets/img/4.jpg" alt="">
+                            </a>
+                            <figcaption>
+                               <a href="https://shop.azelab.com/product-page.html#" class="pl-button pl-addcart" data-toggle="tooltip" data-placement="top" title="" data-original-title="Add To Cart"><i class="icon-bag"></i></a>
+                               <a href="https://shop.azelab.com/product-page.html#" class="pl-button pl-qview" data-toggle="tooltip" data-placement="top" title="" data-original-title="Quick View"><i class="icon-eye"></i></a>
+                               <a href="https://shop.azelab.com/product-page.html#" class="pl-button pl-compare" data-toggle="tooltip" data-placement="top" title="" data-original-title="Compare"><i class="arrow_left-right_alt"></i></a>
+                               <a href="https://shop.azelab.com/product-page.html#" class="pl-button pl-wishlist" data-toggle="tooltip" data-placement="top" title="" data-original-title="Add To Wish List"><i class="icon-heart"></i></a>
+                            </figcaption>
+                         </figure>
+                         <div class="pl-caption">
+                            <p class="pl-price-block">
+                               <span class="pl-price-old"></span>
+                               <span class="pl-price">$ 900.00</span>
+                            </p>
+                            <p class="pl-name">Lacoste Cotton Shirt Slim Fit</p>
+                            <span class="stars-rating"><span class="stars"></span></span>
+                         </div>
+                      </div>
+                   </div>
+                </li>
+                <li>
+                   <div class="row">
+                      <div class="col-md-3 col-sm-6 pl-item">
+                         <figure>
+                            <a href="https://shop.azelab.com/product-page.html">
+                               <img src="assets/img/5.jpg" alt="">
+                            </a>
+                            <figcaption>
+                               <a href="https://shop.azelab.com/product-page.html#" class="pl-button pl-addcart" data-toggle="tooltip" data-placement="top" title="" data-original-title="Add To Cart"><i class="icon-bag"></i></a>
+                               <a href="https://shop.azelab.com/product-page.html#" class="pl-button pl-qview" data-toggle="tooltip" data-placement="top" title="" data-original-title="Quick View"><i class="icon-eye"></i></a>
+                               <a href="https://shop.azelab.com/product-page.html#" class="pl-button pl-compare" data-toggle="tooltip" data-placement="top" title="" data-original-title="Compare"><i class="arrow_left-right_alt"></i></a>
+                               <a href="https://shop.azelab.com/product-page.html#" class="pl-button pl-wishlist" data-toggle="tooltip" data-placement="top" title="" data-original-title="Add To Wish List"><i class="icon-heart"></i></a>
+                            </figcaption>
+                         </figure>
+                         <div class="pl-caption">
+                            <p class="pl-price-block">
+                               <span class="pl-price-old"></span>
+                               <span class="pl-price">$ 900.00</span>
+                            </p>
+                            <p class="pl-name">Lacoste Cotton Shirt Slim Fit</p>
+                            <span class="stars-rating"><span class="stars"></span></span>
+                         </div>
+                      </div>
+                      <div class="col-md-3 col-sm-6 pl-item">
+                         <figure>
+                            <a href="https://shop.azelab.com/product-page.html">
+                               <img src="assets/img/6.jpg" alt="">
+                            </a>
+                            <figcaption>
+                               <a href="https://shop.azelab.com/product-page.html#" class="pl-button pl-addcart" data-toggle="tooltip" data-placement="top" title="" data-original-title="Add To Cart"><i class="icon-bag"></i></a>
+                               <a href="https://shop.azelab.com/product-page.html#" class="pl-button pl-qview" data-toggle="tooltip" data-placement="top" title="" data-original-title="Quick View"><i class="icon-eye"></i></a>
+                               <a href="https://shop.azelab.com/product-page.html#" class="pl-button pl-compare" data-toggle="tooltip" data-placement="top" title="" data-original-title="Compare"><i class="arrow_left-right_alt"></i></a>
+                               <a href="https://shop.azelab.com/product-page.html#" class="pl-button pl-wishlist" data-toggle="tooltip" data-placement="top" title="" data-original-title="Add To Wish List"><i class="icon-heart"></i></a>
+                            </figcaption>
+                         </figure>
+                         <div class="pl-caption">
+                            <p class="pl-price-block">
+                               <span class="pl-price-old"></span>
+                               <span class="pl-price">$ 900.00</span>
+                            </p>
+                            <p class="pl-name">Lacoste Cotton Shirt Slim Fit</p>
+                            <span class="stars-rating"><span class="stars"></span></span>
+                         </div>
+                      </div>
+                      <div class="col-md-3 col-sm-6 pl-item">
+                         <figure>
+                            <a href="https://shop.azelab.com/product-page.html">
+                               <img src="assets/img/7.jpg" alt="">
+                            </a>
+                            <figcaption>
+                               <a href="https://shop.azelab.com/product-page.html#" class="pl-button pl-addcart" data-toggle="tooltip" data-placement="top" title="" data-original-title="Add To Cart"><i class="icon-bag"></i></a>
+                               <a href="https://shop.azelab.com/product-page.html#" class="pl-button pl-qview" data-toggle="tooltip" data-placement="top" title="" data-original-title="Quick View"><i class="icon-eye"></i></a>
+                               <a href="https://shop.azelab.com/product-page.html#" class="pl-button pl-compare" data-toggle="tooltip" data-placement="top" title="" data-original-title="Compare"><i class="arrow_left-right_alt"></i></a>
+                               <a href="https://shop.azelab.com/product-page.html#" class="pl-button pl-wishlist" data-toggle="tooltip" data-placement="top" title="" data-original-title="Add To Wish List"><i class="icon-heart"></i></a>
+                            </figcaption>
+                         </figure>
+                         <div class="pl-caption">
+                            <p class="pl-price-block">
+                               <span class="pl-price-old"></span>
+                               <span class="pl-price">$ 900.00</span>
+                            </p>
+                            <p class="pl-name">Lacoste Cotton Shirt Slim Fit</p>
+                            <span class="stars-rating"><span class="stars"></span></span>
+                         </div>
+                      </div>
+                      <div class="col-md-3 col-sm-6 pl-item">
+                         <figure>
+                            <a href="https://shop.azelab.com/product-page.html">
+                               <img src="assets/img/8.jpg" alt="">
+                            </a>
+                            <figcaption>
+                               <a href="https://shop.azelab.com/product-page.html#" class="pl-button pl-addcart" data-toggle="tooltip" data-placement="top" title="" data-original-title="Add To Cart"><i class="icon-bag"></i></a>
+                               <a href="https://shop.azelab.com/product-page.html#" class="pl-button pl-qview" data-toggle="tooltip" data-placement="top" title="" data-original-title="Quick View"><i class="icon-eye"></i></a>
+                               <a href="https://shop.azelab.com/product-page.html#" class="pl-button pl-compare" data-toggle="tooltip" data-placement="top" title="" data-original-title="Compare"><i class="arrow_left-right_alt"></i></a>
+                               <a href="https://shop.azelab.com/product-page.html#" class="pl-button pl-wishlist" data-toggle="tooltip" data-placement="top" title="" data-original-title="Add To Wish List"><i class="icon-heart"></i></a>
+                            </figcaption>
+                         </figure>
+                         <div class="pl-caption">
+                            <p class="pl-price-block">
+                               <span class="pl-price-old"></span>
+                               <span class="pl-price">$ 900.00</span>
+                            </p>
+                            <p class="pl-name">Lacoste Cotton Shirt Slim Fit</p>
+                            <span class="stars-rating"><span class="stars"></span></span>
+                         </div>
+                      </div>
+                   </div>
+                </li>
+                <li>
+                   <div class="row">
+                      <div class="col-md-3 col-sm-6 pl-item">
+                         <figure>
+                            <a href="https://shop.azelab.com/product-page.html">
+                               <img src="assets/img/2.jpg" alt="">
+                            </a>
+                            <figcaption>
+                               <a href="https://shop.azelab.com/product-page.html#" class="pl-button pl-addcart" data-toggle="tooltip" data-placement="top" title="" data-original-title="Add To Cart"><i class="icon-bag"></i></a>
+                               <a href="https://shop.azelab.com/product-page.html#" class="pl-button pl-qview" data-toggle="tooltip" data-placement="top" title="" data-original-title="Quick View"><i class="icon-eye"></i></a>
+                               <a href="https://shop.azelab.com/product-page.html#" class="pl-button pl-compare" data-toggle="tooltip" data-placement="top" title="" data-original-title="Compare"><i class="arrow_left-right_alt"></i></a>
+                               <a href="https://shop.azelab.com/product-page.html#" class="pl-button pl-wishlist" data-toggle="tooltip" data-placement="top" title="" data-original-title="Add To Wish List"><i class="icon-heart"></i></a>
+                            </figcaption>
+                         </figure>
+                         <div class="pl-caption">
+                            <p class="pl-price-block">
+                               <span class="pl-price-old"></span>
+                               <span class="pl-price">$ 900.00</span>
+                            </p>
+                            <p class="pl-name">Lacoste Cotton Shirt Slim Fit</p>
+                            <span class="stars-rating"><span class="stars"></span></span>
+                         </div>
+                      </div>
+                      <div class="col-md-3 col-sm-6 pl-item">
+                         <figure>
+                            <a href="https://shop.azelab.com/product-page.html">
+                               <img src="assets/img/1.jpg" alt="">
+                            </a>
+                            <figcaption>
+                               <a href="https://shop.azelab.com/product-page.html#" class="pl-button pl-addcart" data-toggle="tooltip" data-placement="top" title="" data-original-title="Add To Cart"><i class="icon-bag"></i></a>
+                               <a href="https://shop.azelab.com/product-page.html#" class="pl-button pl-qview" data-toggle="tooltip" data-placement="top" title="" data-original-title="Quick View"><i class="icon-eye"></i></a>
+                               <a href="https://shop.azelab.com/product-page.html#" class="pl-button pl-compare" data-toggle="tooltip" data-placement="top" title="" data-original-title="Compare"><i class="arrow_left-right_alt"></i></a>
+                               <a href="https://shop.azelab.com/product-page.html#" class="pl-button pl-wishlist" data-toggle="tooltip" data-placement="top" title="" data-original-title="Add To Wish List"><i class="icon-heart"></i></a>
+                            </figcaption>
+                         </figure>
+                         <div class="pl-caption">
+                            <p class="pl-price-block">
+                               <span class="pl-price-old">$ 950.00</span>
+                               <span class="pl-price">$ 900.00</span>
+                            </p>
+                            <p class="pl-name">Lacoste Cotton Shirt Slim Fit</p>
+                            <span class="stars-rating stars-4"><span class="stars"></span></span>
+                         </div>
+                      </div>
+                      <div class="col-md-3 col-sm-6 pl-item">
+                         <figure>
+                            <a href="https://shop.azelab.com/product-page.html">
+                               <img src="assets/img/4.jpg" alt="">
+                            </a>
+                            <figcaption>
+                               <a href="https://shop.azelab.com/product-page.html#" class="pl-button pl-addcart" data-toggle="tooltip" data-placement="top" title="" data-original-title="Add To Cart"><i class="icon-bag"></i></a>
+                               <a href="https://shop.azelab.com/product-page.html#" class="pl-button pl-qview" data-toggle="tooltip" data-placement="top" title="" data-original-title="Quick View"><i class="icon-eye"></i></a>
+                               <a href="https://shop.azelab.com/product-page.html#" class="pl-button pl-compare" data-toggle="tooltip" data-placement="top" title="" data-original-title="Compare"><i class="arrow_left-right_alt"></i></a>
+                               <a href="https://shop.azelab.com/product-page.html#" class="pl-button pl-wishlist" data-toggle="tooltip" data-placement="top" title="" data-original-title="Add To Wish List"><i class="icon-heart"></i></a>
+                            </figcaption>
+                         </figure>
+                         <div class="pl-caption">
+                            <p class="pl-price-block">
+                               <span class="pl-price-old"></span>
+                               <span class="pl-price">$ 900.00</span>
+                            </p>
+                            <p class="pl-name">Lacoste Cotton Shirt Slim Fit</p>
+                            <span class="stars-rating"><span class="stars"></span></span>
+                         </div>
+                      </div>
+                      <div class="col-md-3 col-sm-6 pl-item">
+                         <figure>
+                            <a href="https://shop.azelab.com/product-page.html">
+                               <img src="assets/img/5.jpg" alt="">
+                            </a>
+                            <figcaption>
+                               <a href="https://shop.azelab.com/product-page.html#" class="pl-button pl-addcart" data-toggle="tooltip" data-placement="top" title="" data-original-title="Add To Cart"><i class="icon-bag"></i></a>
+                               <a href="https://shop.azelab.com/product-page.html#" class="pl-button pl-qview" data-toggle="tooltip" data-placement="top" title="" data-original-title="Quick View"><i class="icon-eye"></i></a>
+                               <a href="https://shop.azelab.com/product-page.html#" class="pl-button pl-compare" data-toggle="tooltip" data-placement="top" title="" data-original-title="Compare"><i class="arrow_left-right_alt"></i></a>
+                               <a href="https://shop.azelab.com/product-page.html#" class="pl-button pl-wishlist" data-toggle="tooltip" data-placement="top" title="" data-original-title="Add To Wish List"><i class="icon-heart"></i></a>
+                            </figcaption>
+                         </figure>
+                         <div class="pl-caption">
+                            <p class="pl-price-block">
+                               <span class="pl-price-old"></span>
+                               <span class="pl-price">$ 900.00</span>
+                            </p>
+                            <p class="pl-name">Lacoste Cotton Shirt Slim Fit</p>
+                            <span class="stars-rating"><span class="stars"></span></span>
+                         </div>
+                      </div>
+                   </div>
+                </li>
+                <li>
+                   <div class="row">
+                      <div class="col-md-3 col-sm-6 pl-item">
+                         <figure>
+                            <a href="https://shop.azelab.com/product-page.html">
+                               <img src="assets/img/6.jpg" alt="">
+                            </a>
+                            <figcaption>
+                               <a href="https://shop.azelab.com/product-page.html#" class="pl-button pl-addcart" data-toggle="tooltip" data-placement="top" title="" data-original-title="Add To Cart"><i class="icon-bag"></i></a>
+                               <a href="https://shop.azelab.com/product-page.html#" class="pl-button pl-qview" data-toggle="tooltip" data-placement="top" title="" data-original-title="Quick View"><i class="icon-eye"></i></a>
+                               <a href="https://shop.azelab.com/product-page.html#" class="pl-button pl-compare" data-toggle="tooltip" data-placement="top" title="" data-original-title="Compare"><i class="arrow_left-right_alt"></i></a>
+                               <a href="https://shop.azelab.com/product-page.html#" class="pl-button pl-wishlist" data-toggle="tooltip" data-placement="top" title="" data-original-title="Add To Wish List"><i class="icon-heart"></i></a>
+                            </figcaption>
+                         </figure>
+                         <div class="pl-caption">
+                            <p class="pl-price-block">
+                               <span class="pl-price-old"></span>
+                               <span class="pl-price">$ 900.00</span>
+                            </p>
+                            <p class="pl-name">Lacoste Cotton Shirt Slim Fit</p>
+                            <span class="stars-rating"><span class="stars"></span></span>
+                         </div>
+                      </div>
+                      <div class="col-md-3 col-sm-6 pl-item">
+                         <figure>
+                            <a href="https://shop.azelab.com/product-page.html">
+                               <img src="assets/img/7.jpg" alt="">
+                            </a>
+                            <figcaption>
+                               <a href="https://shop.azelab.com/product-page.html#" class="pl-button pl-addcart" data-toggle="tooltip" data-placement="top" title="" data-original-title="Add To Cart"><i class="icon-bag"></i></a>
+                               <a href="https://shop.azelab.com/product-page.html#" class="pl-button pl-qview" data-toggle="tooltip" data-placement="top" title="" data-original-title="Quick View"><i class="icon-eye"></i></a>
+                               <a href="https://shop.azelab.com/product-page.html#" class="pl-button pl-compare" data-toggle="tooltip" data-placement="top" title="" data-original-title="Compare"><i class="arrow_left-right_alt"></i></a>
+                               <a href="https://shop.azelab.com/product-page.html#" class="pl-button pl-wishlist" data-toggle="tooltip" data-placement="top" title="" data-original-title="Add To Wish List"><i class="icon-heart"></i></a>
+                            </figcaption>
+                         </figure>
+                         <div class="pl-caption">
+                            <p class="pl-price-block">
+                               <span class="pl-price-old"></span>
+                               <span class="pl-price">$ 900.00</span>
+                            </p>
+                            <p class="pl-name">Lacoste Cotton Shirt Slim Fit</p>
+                            <span class="stars-rating"><span class="stars"></span></span>
+                         </div>
+                      </div>
+                       <div class="col-md-3 col-sm-6 pl-item">
+                         <figure>
+                            <a href="https://shop.azelab.com/product-page.html">
+                               <img src="assets/img/3.jpg" alt="">
+                            </a>
+                            <figcaption>
+                               <a href="https://shop.azelab.com/product-page.html#" class="pl-button pl-addcart" data-toggle="tooltip" data-placement="top" title="" data-original-title="Add To Cart"><i class="icon-bag"></i></a>
+                               <a href="https://shop.azelab.com/product-page.html#" class="pl-button pl-qview" data-toggle="tooltip" data-placement="top" title="" data-original-title="Quick View"><i class="icon-eye"></i></a>
+                               <a href="https://shop.azelab.com/product-page.html#" class="pl-button pl-compare" data-toggle="tooltip" data-placement="top" title="" data-original-title="Compare"><i class="arrow_left-right_alt"></i></a>
+                               <a href="https://shop.azelab.com/product-page.html#" class="pl-button pl-wishlist" data-toggle="tooltip" data-placement="top" title="" data-original-title="Add To Wish List"><i class="icon-heart"></i></a>
+                            </figcaption>
+                         </figure>
+                         <div class="pl-caption">
+                            <p class="pl-price-block">
+                               <span class="pl-price-old"></span>
+                               <span class="pl-price">$ 900.00</span>
+                            </p>
+                            <p class="pl-name">Lacoste Cotton Shirt Slim Fit</p>
+                            <span class="stars-rating"><span class="stars"></span></span>
+                         </div>
+                      </div>
+                      <div class="col-md-3 col-sm-6 pl-item">
+                         <figure>
+                            <a href="https://shop.azelab.com/product-page.html">
+                               <img src="assets/img/8.jpg" alt="">
+                            </a>
+                            <figcaption>
+                               <a href="https://shop.azelab.com/product-page.html#" class="pl-button pl-addcart" data-toggle="tooltip" data-placement="top" title="" data-original-title="Add To Cart"><i class="icon-bag"></i></a>
+                               <a href="https://shop.azelab.com/product-page.html#" class="pl-button pl-qview" data-toggle="tooltip" data-placement="top" title="" data-original-title="Quick View"><i class="icon-eye"></i></a>
+                               <a href="https://shop.azelab.com/product-page.html#" class="pl-button pl-compare" data-toggle="tooltip" data-placement="top" title="" data-original-title="Compare"><i class="arrow_left-right_alt"></i></a>
+                               <a href="https://shop.azelab.com/product-page.html#" class="pl-button pl-wishlist" data-toggle="tooltip" data-placement="top" title="" data-original-title="Add To Wish List"><i class="icon-heart"></i></a>
+                            </figcaption>
+                         </figure>
+                         <div class="pl-caption">
+                            <p class="pl-price-block">
+                               <span class="pl-price-old"></span>
+                               <span class="pl-price">$ 900.00</span>
+                            </p>
+                            <p class="pl-name">Lacoste Cotton Shirt Slim Fit</p>
+                            <span class="stars-rating"><span class="stars"></span></span>
+                         </div>
+                      </div>
+                   </div>
+                </li>
+             </ul>
+             <div class="pl-controls">
+                <a href="https://shop.azelab.com/product-page.html#" class="pl-ctl-left"></a>
+                <a href="https://shop.azelab.com/product-page.html#" class="pl-ctl-right"></a>
+             </div>
+          </div>
+       </div>
+    </section>
+
+    <div class="container">
+       <div class="row subscribe">
+          <div class="col-md-6 col-sm-12"><h3><span class="icon-envelope"></span>SUBSCRIBE FOR OUR NEWSLETTER</h3></div>
+          <div class="col-md-6 col-sm-12">
+             <form action="https://shop.azelab.com/">
+                <div class="required form-group search col-sm-8 col-xs-12">
+                   <input type="text" class="placeholder-fix" placeholder="Enter your e-mail adress">
+                </div>
+                <div class="col-sm-4 col-xs-12">
+                      <input type="submit" class="btn btn-sec-col" value="SUBSCRIBE">   
+                </div>
+             </form>
+          </div>
+       </div>
+    </div>
+
+    
+ </div> <!-- pg-body -->

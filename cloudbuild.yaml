@@ -1,0 +1,20 @@
+steps:
+- name: 'gcr.io/cloud-builders/npm@sha256:7386198807386449805314bea40ab8dcd98c1e98c991f1c3616c4ae85fb819e0'
+  args: [ 'install' ]
+- name: 'gcr.io/cloud-builders/npm@sha256:7386198807386449805314bea40ab8dcd98c1e98c991f1c3616c4ae85fb819e0'
+  args: [ 'run', 'build', '--', '--configuration=production']
+- name: 'gcr.io/cloud-builders/docker'
+  args: [ 'build', '-t', 'gcr.io/ecom-case-study/frontend-image:v1', '.' ]
+- name: 'gcr.io/cloud-builders/docker'
+  args: ['push', 'gcr.io/ecom-case-study/frontend-image:v1']
+- name: 'gcr.io/cloud-builders/gke-deploy:stable'
+  args:
+  - run
+  - --filename=./frontend.yaml
+  - --image=gcr.io/ecom-case-study/frontend-image:v1
+  - --location=us-central1-a
+  - --cluster=amcartecom
+timeout: 660s
+tags: ['mytag1', 'mytag2']
+images:
+- 'gcr.io/ecom-case-study/frontend-image:v1'
