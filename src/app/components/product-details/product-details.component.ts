@@ -26,6 +26,7 @@ export class ProductDetailsComponent implements OnInit {
   colorVariants: any[];
   colors: any[];
   productCode: string;
+  color: string;
 
   constructor(private searchSharedService: SearchSharedService,private route: ActivatedRoute,
     private router:Router,private location:Location) 
@@ -101,6 +102,7 @@ export class ProductDetailsComponent implements OnInit {
   getColorVariants(color: any): any[]{
    // console.log("getColorVariants:"+ color);
     let colorVariants = [];
+    this.color = color;
     this.product.variants[0].colors.forEach(
       (c,i) => {
         let key = Object.keys(c)[0];
