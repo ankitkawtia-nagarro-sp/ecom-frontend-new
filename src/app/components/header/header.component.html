@@ -152,12 +152,18 @@
                                  <input type="text" name="mobilenumber" [(ngModel)]="registerPayload.mobileNumber" placeholder="Mobile Number(For order status updates)" class="placeholder-fix" required>
                                  <i class="icon-screen-smartphone field-icon"></i>
                               </div>
-                              <div class="form-group">
+                              <div class="required form-group">
                                  <label class="stl" for="gender"><span></span>I'm a </label>
-                                 <input id="male" class="stl" type="radio" value="1" name="male">
+                                 <!--
+                                 <input id="male" type="radio" class="stl custom-control-input"  value="male" name="gender" ngModel required>
                                     <label class="stl" for="male"><span></span>Male</label>
-                                 <input id="female" class="stl" type="radio" value="2" name="female">
+                                     <input id="female" type="radio" class="stl custom-control-input"  value="female" name="gender">
                                     <label class="stl" for="female"><span></span>Female</label>
+                                 -->
+                                    <input id="male" type="radio" class="custom-control-input" value="male" name="gender" ngModel required>
+                                       <label class="custom-control-label" for="male">Male</label>
+                                    <input id="female" type="radio" class="custom-control-input" value="female" name="gender" ngModel required>
+                                       <label class="custom-control-label" for="female">Female</label>
                               </div>
                               <div class="text-danger" *ngIf="isError">
                                  {{errorMessage}}
